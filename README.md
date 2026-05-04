@@ -2,7 +2,7 @@ Multi-Tenant AI Assistant Platform
 
 A production-quality, multi-tenant AI platform built with Next.js, MongoDB, and Gemini AI. This project demonstrates clean architecture, role-based access control, and a fully config-driven admin dashboard.
 
- Features
+🚀 Features
 Multi-tenant architecture (project-based isolation)
 AI-powered chat system (Google Gemini)
 Role-based access control (admin / member)
@@ -35,7 +35,7 @@ AUTH_SECRET=your_secure_random_secret
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 4. Seed the Database
 
-
+⚠️ Important: Required for demo data
 
 node scripts/seed.js
 
@@ -46,8 +46,7 @@ Sample projects (multi-tenant setup)
 Dashboard configuration (for admin UI)
 5. Run the Application
 npm run dev
-
- Architecture
+🏗️ Architecture
 
 This project follows a strict layered architecture:
 
@@ -62,7 +61,7 @@ Hooks (hooks/)
 Client-side data fetching using TanStack Query
 UI (components/)
 Presentation layer using React + Tailwind
- Multi-Tenant Model
+🧩 Multi-Tenant Model
 
 Each project acts as a tenant.
 
@@ -73,7 +72,7 @@ Conversations
 Product instances
 Users cannot access other project data
 Ensures complete data isolation between tenants
- Role-Based Access Control (RBAC)
+🔐 Role-Based Access Control (RBAC)
 Admin
 Access to admin dashboard
 Full project control
@@ -82,7 +81,7 @@ Access to chat system only
 
 All authorization is enforced server-side via Access Layer.
 
-AI + Integrations
+🤖 AI + Integrations
 AI Integration
 Uses Gemini API (real)
 Controlled via service layer
@@ -102,7 +101,7 @@ Stored in MongoDB as toggles:
 
 Chat responses adapt based on enabled integrations.
 
-Config-Driven Admin Dashboard
+ Config-Driven Admin Dashboard
 
 The admin dashboard UI is fully controlled by MongoDB.
 
@@ -117,14 +116,14 @@ Example Config:
     }
   ]
 }
- Behavior:
+✅ Behavior:
 UI is generated dynamically from this config
 Editing MongoDB updates UI instantly
 No code changes required
 
- NOTE: Config-driven behavior is implemented ONLY for the admin dashboard as per assignment requirements.
+👉 NOTE: Config-driven behavior is implemented ONLY for the admin dashboard as per assignment requirements.
 
- Testing Multi-Tenancy
+🧪 Testing Multi-Tenancy
 
 After seeding:
 
@@ -134,13 +133,13 @@ Admin (Project 2): admin@project2.com
 
 Each project has isolated data and context.
 
- API Overview
+🔌 API Overview
 GET /api/projects
 POST /api/conversations
 GET /api/conversations/:id
 POST /api/chat
 GET /api/admin/dashboard-config
- Assumptions & Mocked Components
+💡 Assumptions & Mocked Components
 Authentication is simplified (mock login system)
 Shopify and CRM integrations are simulated
 AI uses Gemini API with fallback handling
